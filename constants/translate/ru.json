@@ -1,0 +1,18 @@
+{
+    "Save QR as PNG": "Сохранить QR в формате PNG",
+    "QR Code Generator": "Генератор QR-кода",
+    "Paste a URL or enter text to create a QR code": "Вставьте URL-адрес или введите текст, чтобы создать QR-код.",
+    "Enter text or URL": "Введите текст или URL-адрес",
+    "Generate QR Code": "Создать QR-код",
+    "remove": "удалять",
+    "Language": "Язык",
+    "Alert Title":"QR-код сканируется",
+    "Open Link":"Открыть ссылку",
+    "Close":"Закрывать",
+    "Open":"Открыть",
+    "Scan": "Сканировать",
+    "Create QR":"Создать QR-код",
+    "Settings":"Настройки",
+    "QR List":"QR-список",
+    "Mode": "режим"
+}
