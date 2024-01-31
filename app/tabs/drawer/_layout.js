@@ -5,6 +5,7 @@ import QRList from '../../../screen/QRList';
 import Settings from '../../../screen/Settings';
 import { useTranslation } from "react-i18next";
 import { useSelector } from 'react-redux'
+import ScanImage from '../../../screen/ScanImage';
 
 
 
@@ -21,6 +22,7 @@ export default function Drawer() {
           <Drawers.Screen options={{title: t("Create QR")}} name="Create QR" component={CreateQR} />
           <Drawers.Screen options={{title: t("Settings")}} name="Settings" component={Settings} />
           <Drawers.Screen options={{title: t("QR List")}} name="QRList" component={QRList} />
+          <Drawers.Screen options={{title: t("ScanImage")}} name="ScanImage" component={ScanImage} />
         </Drawers.Navigator>
 
       );

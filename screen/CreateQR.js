@@ -29,12 +29,6 @@ export default function CreateQR({navigation}) {
       }
     };
   
-    const deleteQr = async (el) =>{
-      await FileSystem.deleteAsync(`${directoryPath}/${el}`, { idempotent: true });
-      getPNGFiles()
-    }
-  
-
   
     return (
       <View style={styles.container}>
@@ -42,7 +36,7 @@ export default function CreateQR({navigation}) {
           <Text style={[styles.title, {color: mode ? 'white' : 'black'}]}>{t("QR Code Generator")}</Text>
           <Text style={[styles.description, {color: mode ? 'white' : '#575757',}]}>{t("Paste a URL or enter text to create a QR code")}</Text>
           <TextInput
-            style={styles.input}
+            style={[styles.input, {color: mode ? 'white' : 'black' }]}
             placeholder={t("Enter text or URL")}
             value={qrValue}
             placeholderTextColor={mode ? 'white' : 'black'}

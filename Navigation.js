@@ -18,8 +18,6 @@ export default function Navigation() {
         dispatch(getMode())
     },[])
 
-    console.log(mode);
-
     const MyTheme = mode
     ? {
         dark: true,

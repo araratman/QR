@@ -1,6 +1,11 @@
 {
   "expo": {
     "name": "my-app",
-    "slug": "my-app"
+    "slug": "my-app",
+    "android": {
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    }
   }
 }

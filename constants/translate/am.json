@@ -14,5 +14,8 @@
     "Create QR":"Ստեղծեք QR",
     "Settings":"Կարգավորումներ",
     "QR List":"QR ցուցակ",
-    "Mode": "ռեժիմ"
+    "Mode": "ռեժիմ",
+    "ScanImage":"Պատկերի սկանավորում",
+    "Pick Another Image":"Ընտրիր մեկ այլ պատկեր",
+    "Pick an Image from Gallery":"Ընտրիր պատկեր պատկերասրահից"
 }

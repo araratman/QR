@@ -14,5 +14,8 @@
     "Create QR":"Создать QR-код",
     "Settings":"Настройки",
     "QR List":"QR-список",
-    "Mode": "режим"
+    "Mode": "режим",
+    "ScanImage":"Сканировать изображение",
+    "Pick Another Image":"Выбери другое изображение",
+    "Pick an Image from Gallery":"Выбрать изображение из галереи"
 }

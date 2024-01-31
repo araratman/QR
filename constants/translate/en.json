@@ -14,5 +14,8 @@
     "Create QR":"Create QR",
     "Settings":"Settings",
     "QR List":"QR List",
-    "Mode": "Mode"
+    "Mode": "Mode",
+    "ScanImage":"Scan Image",
+    "Pick Another Image":"Pick Another Image",
+    "Pick an Image from Gallery":"Pick an Image from Gallery"
 }
