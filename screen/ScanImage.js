@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { View, Image, Button, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import jsQR from "jsqr";
+import { useTranslation } from "react-i18next";
 
-export default function ScanImage() {
+
+export default function ScanImage({navigation}) {
   const [image, setImage] = useState(null);
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
+  const {t} = useTranslation()
+
 
   useEffect(() => {
     (async () => {
@@ -16,17 +20,18 @@ export default function ScanImage() {
   }, []);
 
   const pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [5, 5],
-      quality: 1,
-    });
-
-    if (!result.cancelled) {
-      setImage(result);
-      setScanned(false);
-    }
+    if(ImagePicker.MediaTypeOptions.Images){    
+        let result = await ImagePicker?.launchImageLibraryAsync({
+            mediaTypes: ImagePicker?.MediaTypeOptions?.Images,
+            allowsEditing: true,
+            aspect: [5, 5],
+            quality: 1,
+          });
+          if (!result.cancelled) {
+            setImage(result);
+            setScanned(false);
+          }
+    }  
   };
 
   const handleImageLoad = async (loadedImage) => {
@@ -67,7 +72,7 @@ export default function ScanImage() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       {image && (
-        <View>
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
           <Image
             source={{ uri: image.assets[0].uri }}
             style={{ width: 200, height: 200, marginBottom: 20 }}
