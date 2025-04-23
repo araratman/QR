@@ -18,7 +18,7 @@ export default function Drawer() {
     return (
 
         <Drawers.Navigator screenOptions={{headerTintColor: mode ? 'silver' : 'black'}}>
-          <Drawers.Screen options={{title: t("Scan")}} name="Scan" component={Scan} />
+          {/* <Drawers.Screen options={{title: t("Scan")}} name="Scan" component={Scan} /> */}
           <Drawers.Screen options={{title: t("Create QR")}} name="Create QR" component={CreateQR} />
           <Drawers.Screen options={{title: t("Settings")}} name="Settings" component={Settings} />
           <Drawers.Screen options={{title: t("QR List")}} name="QRList" component={QRList} />

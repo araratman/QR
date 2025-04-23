@@ -12,44 +12,44 @@ const Stack = createNativeStackNavigator();
 
 
 export default function Navigation() {
-    const {mode} = useSelector((state) => state.mode)
-    const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(getMode())
-    },[])
+  const { mode } = useSelector((state) => state.mode)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getMode())
+  }, [])
 
-    const MyTheme = mode
+  const MyTheme = mode
     ? {
-        dark: true,
-        colors: {
-          primary: "silver",
-          background: "#181A20",
-          card: "#181A20",
-          text: "#9E9E9E",
-          border: "#181A20",
-          notification: "umber",
-        },
-      }
+      dark: true,
+      colors: {
+        primary: "silver",
+        background: "#181A20",
+        card: "#181A20",
+        text: "#9E9E9E",
+        border: "#181A20",
+        notification: "umber",
+      },
+    }
     : {
-        dark: false,
-        colors: {
-          primary: "silver",
-          background: "rgb(242, 242, 242)",
-          card: "rgb(255, 255, 255)",
-          text: "rgb(28, 28, 30)",
-          border: "rgb(199, 199, 204)",
-          notification: "rgb(255, 69, 58)",
-        },
-      };
+      dark: false,
+      colors: {
+        primary: "silver",
+        background: "rgb(242, 242, 242)",
+        card: "rgb(255, 255, 255)",
+        text: "rgb(28, 28, 30)",
+        border: "rgb(199, 199, 204)",
+        notification: "rgb(255, 69, 58)",
+      },
+    };
 
   return (
     <NavigationContainer theme={MyTheme}>
-    <StatusBar hidden />
+      <StatusBar hidden />
 
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Drawer" component={Drawer} />
-      <Stack.Screen name="CreatedQR" component={CreatedQR} />
-    </Stack.Navigator>
-  </NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Drawer" component={Drawer} />
+        <Stack.Screen name="CreatedQR" component={CreatedQR} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
